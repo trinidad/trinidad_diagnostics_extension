@@ -11,10 +11,19 @@ GEM
   remote: http://rubygems.org/
   specs:
     bouncy-castle-java (1.5.0146.1)
+    diff-lcs (1.1.2)
     jruby-openssl (0.7.4)
       bouncy-castle-java
     jruby-rack (1.0.9)
     nokogiri (1.5.0.beta.4-java)
+    rspec (2.5.0)
+      rspec-core (~> 2.5.0)
+      rspec-expectations (~> 2.5.0)
+      rspec-mocks (~> 2.5.0)
+    rspec-core (2.5.2)
+    rspec-expectations (2.5.0)
+      diff-lcs (~> 1.1.2)
+    rspec-mocks (2.5.0)
     term-ansicolor (1.0.5)
     trinidad (1.2.1)
       jruby-rack (>= 1.0.9)
@@ -26,4 +35,5 @@ PLATFORMS
 
 DEPENDENCIES
   jruby-lint!
+  rspec
   trinidad

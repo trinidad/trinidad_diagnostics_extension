@@ -36,15 +36,22 @@ module Trinidad
           puts '-- Trinidad diagnostics on' if @debug
           app_context = event.lifecycle
 
-          options = OpenStruct.new(
-            :html => report_output(app_context),
-            :chdir => app_context.doc_base,
-            :text => @debug)
+          options = lint_options(app_context)
 
-          project = JRuby::Lint::Project.new(options)
-          project.run
+          run_diagnostics(options)
           puts '-- Trinidad diagnostics off' if @debug
         end
+      end
+
+      def run_diagnostics(options)
+        JRuby::Lint::Project.new(options).run
+      end
+
+      def lint_options(app_context)
+        OpenStruct.new(
+          :html => report_output(app_context),
+          :chdir => app_context.doc_base,
+          :text => @debug)
       end
 
       def report_output(app_context)
