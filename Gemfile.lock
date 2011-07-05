@@ -1,17 +1,12 @@
-GIT
-  remote: git@github.com:jruby/jruby-lint.git
-  revision: 828f9d333d20ddd81a47b67d40800e6eaec07591
-  specs:
-    jruby-lint (0.2.0)
-      jruby-openssl
-      nokogiri (= 1.5.0.beta.4)
-      term-ansicolor
-
 GEM
   remote: http://rubygems.org/
   specs:
     bouncy-castle-java (1.5.0146.1)
     diff-lcs (1.1.2)
+    jruby-lint (0.3.0)
+      jruby-openssl
+      nokogiri (= 1.5.0.beta.4)
+      term-ansicolor
     jruby-openssl (0.7.4)
       bouncy-castle-java
     jruby-rack (1.0.9)
@@ -34,6 +29,6 @@ PLATFORMS
   java
 
 DEPENDENCIES
-  jruby-lint!
+  jruby-lint (>= 0.3.0)
   rspec
   trinidad
