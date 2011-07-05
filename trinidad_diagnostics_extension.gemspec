@@ -14,20 +14,20 @@ Gem::Specification.new do |s|
   ## the sub! line in the Rakefile
   s.name              = 'trinidad_diagnostics_extension'
   s.version           = '0.1.0'
-  s.date              = '2011-07-03'
+  s.date              = '2011-07-05'
   s.rubyforge_project = 'trinidad_diagnostics_extension'
 
   ## Make sure your summary is short. The description may be as long
   ## as you like.
-  s.summary     = "Sandbox console for Trinidad"
-  s.description = "Sandox console for Trinidad. It allows to manage the applications deployed on Trinidad."
+  s.summary     = "JRuby diagnostics for Trinidad"
+  s.description = "Plugin that uses JRuby-lint to run diagnostics for the application before Trinidad starts it up"
 
   ## List the primary authors. If there are a bunch of authors, it's probably
   ## better to set the email to an email list or something. If you don't have
   ## a custom homepage, consider using your GitHub URL or the like.
   s.authors  = ["David Calavera"]
   s.email    = 'calavera@apache.org'
-  s.homepage = 'http://github.com/calavera/trinidad_sandbox_extension'
+  s.homepage = 'http://github.com/calavera/trinidad_diagnostics_extension'
 
   ## This gets added to the $LOAD_PATH so that 'lib/NAME.rb' can be required as
   ## require 'NAME.rb' or'/lib/NAME/file.rb' can be as require 'NAME/file.rb'
@@ -36,12 +36,12 @@ Gem::Specification.new do |s|
   ## Specify any RDoc options here. You'll want to add your README and
   ## LICENSE files to the extra_rdoc_files list.
   s.rdoc_options = ["--charset=UTF-8"]
-  s.extra_rdoc_files = %w[README LICENSE]
+  s.extra_rdoc_files = %w[README.md LICENSE]
 
   ## List your runtime dependencies here. Runtime dependencies are those
   ## that are needed for an end user to actually USE your code.
   s.add_dependency('trinidad')
-  s.add_dependency('jruby-lint')
+  s.add_dependency('jruby-lint', '>=0.3.0')
 
   ## List your development dependencies here. Development dependencies are
   ## those that are only needed during development
@@ -54,10 +54,13 @@ Gem::Specification.new do |s|
   s.files = %w[
     Gemfile
     Gemfile.lock
+    History.txt
     LICENSE
-    README
+    README.md
     Rakefile
     lib/trinidad_diagnostics_extension.rb
+    spec/spec_helper.rb
+    spec/trinidad_diagnostics_extension_spec.rb
     trinidad_diagnostics_extension.gemspec
   ]
   # = MANIFEST =
