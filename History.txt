@@ -1,4 +1,4 @@
-== 0.1.0 (??)
+== 0.1.0 (2011-07-05)
 
 * Initial release
 * Create diagnostics.html
